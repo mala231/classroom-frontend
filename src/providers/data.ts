@@ -156,9 +156,9 @@ const dataProvider: DataProvider = {
   create: async ({ resource, variables, meta }: any) => {
     if (resource === "subjects") {
       const newSubject = {
+        ...variables,
         id: localSubjects.length > 0 ? Math.max(...localSubjects.map(s => s.id)) + 1 : 1,
         createdAt: new Date().toISOString(),
-        ...variables,
       };
       localSubjects.push(newSubject as any);
       return {

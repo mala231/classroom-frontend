@@ -52,7 +52,7 @@ const SubjectsList = () => {
                 accessorKey: 'description',
                 size: 300,
                 header: () => <p className="column-title">Description</p>,
-                cell: ({ getValue }) => <span className="truncate line-clamp-2">{getValue<string>()}</span>,
+                cell: ({ getValue }) => <span className="line-clamp-2 break-words whitespace-normal">{getValue<string>()}</span>,
             }
     ],
 
